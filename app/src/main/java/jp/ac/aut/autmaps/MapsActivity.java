@@ -40,8 +40,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             test1();
         }else if(key == 2){
             test2();
-        }else{
-            test3();
+        }else if(key == 3){
+           test3();
+        }else if(key == 4){
+            test4();
+        }else if(key == 5){
+            test5();
+        }else if(key == 6){
+            test6();
+        }else if(key == 7){
+            test7();
+        }else if(key == 8){
+            test8();
+        } else{
+            test10();
         }
     }
 
@@ -69,16 +81,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(cUpdate);
     }
 
-    // 4号館緯度経度を入れて経路を検索
+    // 1号館緯度経度を入れて経路を検索
     private void test1(){
-
         // 起点の緯度経度
-        String src_lat = "34.83199544311324";
-        String src_ltg = "137.19221521910694";
+        String src_lat = "34.831776300364226";
+        String src_ltg = "137.19219814664044";
 
         // 目的地の緯度経度
-        String des_lat = "34.83271214801132";
-        String des_ltg = "137.19337738958157";
+        String des_lat = "34.83190700176493";
+        String des_ltg = "137.19440365723207";
 
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
@@ -96,15 +107,93 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
 
-    // 4号館緯度経度を入れて経路を検索
+    // 2号館緯度経度を入れて経路を検索
     private void test2(){
         // 起点の緯度経度
-        String src_lat = "34.83199544311324";
-        String src_ltg = "137.19221521910694";
+        String src_lat = "34.831776300364226";
+        String src_ltg = "137.19219814664044";
 
         // 目的地の緯度経度
-        String des_lat = "34.832661960529535";
-        String des_ltg = "137.19279216525027";
+        String des_lat = "34.832164232637965";
+        String des_ltg = "137.19447988455735";
+
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+
+        intent.setClassName("com.google.android.apps.maps",
+                "com.google.android.maps.MapsActivity");
+
+        // 起点の緯度,経度, 目的地の緯度,経度
+        String str = String.format(Locale.US,
+                "http://maps.google.com/maps?saddr=%s,%s&daddr=%s,%s",
+                src_lat, src_ltg, des_lat, des_ltg);
+
+        intent.setData(Uri.parse(str));
+        startActivity(intent);
+    }
+
+    // 3号館緯度経度を入れて経路を検索
+    private void test3(){
+
+        // 起点の緯度経度
+        String src_lat = "34.831776300364226";
+        String src_ltg = "137.19219814664044";
+
+        // 目的地の緯度経度
+        String des_lat = "34.832192041332824";
+        String des_ltg = "137.19362952638556";
+
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+
+        intent.setClassName("com.google.android.apps.maps",
+                "com.google.android.maps.MapsActivity");
+
+        // 起点の緯度,経度, 目的地の緯度,経度
+        String str = String.format(Locale.US,
+                "http://maps.google.com/maps?saddr=%s,%s&daddr=%s,%s",
+                src_lat, src_ltg, des_lat, des_ltg);
+
+        intent.setData(Uri.parse(str));
+        startActivity(intent);
+    }
+
+    // 4号館緯度経度を入れて経路を検索
+    private void test4() {
+
+        // 起点の緯度経度
+        String src_lat = "34.831776300364226";
+        String src_ltg = "137.19219814664044";
+
+        // 目的地の緯度経度
+        String des_lat = "34.832634198326524";
+        String des_ltg = "137.19278086218665";
+
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+
+        intent.setClassName("com.google.android.apps.maps",
+                "com.google.android.maps.MapsActivity");
+
+        // 起点の緯度,経度, 目的地の緯度,経度
+        String str = String.format(Locale.US,
+                "http://maps.google.com/maps?saddr=%s,%s&daddr=%s,%s",
+                src_lat, src_ltg, des_lat, des_ltg);
+
+        intent.setData(Uri.parse(str));
+        startActivity(intent);
+    }
+
+    // 5号館緯度経度を入れて経路を検索
+    private void test5() {
+
+        // 起点の緯度経度
+        String src_lat = "34.831776300364226";
+        String src_ltg = "137.19219814664044";
+
+        // 目的地の緯度経度
+        String des_lat = "34.832634198326524";
+        String des_ltg = "137.1931145684788";
 
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
@@ -122,15 +211,93 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     // 6号館緯度経度を入れて経路を検索
-    private void test3(){
+    private void test6() {
 
         // 起点の緯度経度
-        String src_lat = "34.83199544311324";
-        String src_ltg = "137.19221521910694";
+        String src_lat = "34.831776300364226";
+        String src_ltg = "137.19219814664044";
 
         // 目的地の緯度経度
-        String des_lat = "34.83247315972881";
-        String des_ltg = "137.19314446447456";
+        String des_lat = "34.83245344261189";
+        String des_ltg = "137.19316538669716";
+
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+
+        intent.setClassName("com.google.android.apps.maps",
+                "com.google.android.maps.MapsActivity");
+
+        // 起点の緯度,経度, 目的地の緯度,経度
+        String str = String.format(Locale.US,
+                "http://maps.google.com/maps?saddr=%s,%s&daddr=%s,%s",
+                src_lat, src_ltg, des_lat, des_ltg);
+
+        intent.setData(Uri.parse(str));
+        startActivity(intent);
+    }
+
+    // 7号館緯度経度を入れて経路を検索
+    private void test7() {
+
+        // 起点の緯度経度
+        String src_lat = "34.831776300364226";
+        String src_ltg = "137.19219814664044";
+
+        // 目的地の緯度経度
+        String des_lat = "34.83269398667252";
+        String des_ltg = "137.19339576262126";
+
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+
+        intent.setClassName("com.google.android.apps.maps",
+                "com.google.android.maps.MapsActivity");
+
+        // 起点の緯度,経度, 目的地の緯度,経度
+        String str = String.format(Locale.US,
+                "http://maps.google.com/maps?saddr=%s,%s&daddr=%s,%s",
+                src_lat, src_ltg, des_lat, des_ltg);
+
+        intent.setData(Uri.parse(str));
+        startActivity(intent);
+    }
+
+    // 8号館緯度経度を入れて経路を検索
+    private void test8() {
+
+        // 起点の緯度経度
+        String src_lat = "34.831776300364226";
+        String src_ltg = "137.19219814664044";
+
+        // 目的地の緯度経度
+        String des_lat = "34.83212383128849";
+        String des_ltg = "137.19255586474043";
+
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+
+        intent.setClassName("com.google.android.apps.maps",
+                "com.google.android.maps.MapsActivity");
+
+        // 起点の緯度,経度, 目的地の緯度,経度
+        String str = String.format(Locale.US,
+                "http://maps.google.com/maps?saddr=%s,%s&daddr=%s,%s",
+                src_lat, src_ltg, des_lat, des_ltg);
+
+        intent.setData(Uri.parse(str));
+        startActivity(intent);
+    }
+
+    // 体育館緯度経度を入れて経路を検索
+    private void test10() {
+
+        // 起点の緯度経度
+        String src_lat = "34.831776300364226";
+        String src_ltg = "137.19219814664044";
+
+        // 目的地の緯度経度
+        String des_lat = "34.83290793455413";
+        String des_ltg = "137.19239026328745";
 
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
