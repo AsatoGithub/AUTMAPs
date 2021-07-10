@@ -20,6 +20,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
 
+    public String GPS1;
+    public String GPS2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +38,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Intent intent=getIntent();
         //受け取った値を変数keyに代入、値がなければ-1を格納
         int key = intent.getIntExtra("key",-1);
+        //route.javaクラスから受け取った現在地座標を変数に代入
+        GPS1 = intent.getStringExtra("gps1");
+        GPS2 = intent.getStringExtra("gps2");
+
+
+
         //keyの値でどの経路案内を行うか決める
         if(key == 1){
             test1();
@@ -84,8 +93,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     // 1号館緯度経度を入れて経路を検索
     private void test1(){
         // 起点の緯度経度
-        String src_lat = "34.831776300364226";
-        String src_ltg = "137.19219814664044";
+        String src_lat = GPS1;
+        String src_ltg = GPS2;
 
         // 目的地の緯度経度
         String des_lat = "34.83190700176493";
@@ -100,7 +109,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // 起点の緯度,経度, 目的地の緯度,経度
         String str = String.format(Locale.US,
                 "http://maps.google.com/maps?saddr=%s,%s&daddr=%s,%s",
-                src_lat, src_ltg, des_lat, des_ltg);
+                GPS1, GPS2, des_lat, des_ltg);
 
         intent.setData(Uri.parse(str));
         startActivity(intent);
@@ -110,8 +119,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     // 2号館緯度経度を入れて経路を検索
     private void test2(){
         // 起点の緯度経度
-        String src_lat = "34.831776300364226";
-        String src_ltg = "137.19219814664044";
+        String src_lat = GPS1;
+        String src_ltg = GPS2;
 
         // 目的地の緯度経度
         String des_lat = "34.832164232637965";
@@ -126,7 +135,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // 起点の緯度,経度, 目的地の緯度,経度
         String str = String.format(Locale.US,
                 "http://maps.google.com/maps?saddr=%s,%s&daddr=%s,%s",
-                src_lat, src_ltg, des_lat, des_ltg);
+                GPS1, GPS2, des_lat, des_ltg);
 
         intent.setData(Uri.parse(str));
         startActivity(intent);
@@ -136,8 +145,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void test3(){
 
         // 起点の緯度経度
-        String src_lat = "34.831776300364226";
-        String src_ltg = "137.19219814664044";
+        String src_lat = GPS1;
+        String src_ltg = GPS2;
 
         // 目的地の緯度経度
         String des_lat = "34.832192041332824";
@@ -152,7 +161,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // 起点の緯度,経度, 目的地の緯度,経度
         String str = String.format(Locale.US,
                 "http://maps.google.com/maps?saddr=%s,%s&daddr=%s,%s",
-                src_lat, src_ltg, des_lat, des_ltg);
+                GPS1, GPS2, des_lat, des_ltg);
 
         intent.setData(Uri.parse(str));
         startActivity(intent);
@@ -162,8 +171,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void test4() {
 
         // 起点の緯度経度
-        String src_lat = "34.831776300364226";
-        String src_ltg = "137.19219814664044";
+        String src_lat = GPS1;
+        String src_ltg = GPS2;
 
         // 目的地の緯度経度
         String des_lat = "34.832634198326524";
@@ -178,7 +187,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // 起点の緯度,経度, 目的地の緯度,経度
         String str = String.format(Locale.US,
                 "http://maps.google.com/maps?saddr=%s,%s&daddr=%s,%s",
-                src_lat, src_ltg, des_lat, des_ltg);
+                GPS1, GPS2, des_lat, des_ltg);
 
         intent.setData(Uri.parse(str));
         startActivity(intent);
@@ -188,8 +197,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void test5() {
 
         // 起点の緯度経度
-        String src_lat = "34.831776300364226";
-        String src_ltg = "137.19219814664044";
+        String src_lat = GPS1;
+        String src_ltg = GPS2;
 
         // 目的地の緯度経度
         String des_lat = "34.832634198326524";
@@ -204,7 +213,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // 起点の緯度,経度, 目的地の緯度,経度
         String str = String.format(Locale.US,
                 "http://maps.google.com/maps?saddr=%s,%s&daddr=%s,%s",
-                src_lat, src_ltg, des_lat, des_ltg);
+                GPS1, GPS2, des_lat, des_ltg);
 
         intent.setData(Uri.parse(str));
         startActivity(intent);
@@ -214,8 +223,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void test6() {
 
         // 起点の緯度経度
-        String src_lat = "34.831776300364226";
-        String src_ltg = "137.19219814664044";
+        String src_lat = GPS1;
+        String src_ltg = GPS2;
 
         // 目的地の緯度経度
         String des_lat = "34.83245344261189";
@@ -230,7 +239,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // 起点の緯度,経度, 目的地の緯度,経度
         String str = String.format(Locale.US,
                 "http://maps.google.com/maps?saddr=%s,%s&daddr=%s,%s",
-                src_lat, src_ltg, des_lat, des_ltg);
+                GPS1, GPS2, des_lat, des_ltg);
 
         intent.setData(Uri.parse(str));
         startActivity(intent);
@@ -240,8 +249,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void test7() {
 
         // 起点の緯度経度
-        String src_lat = "34.831776300364226";
-        String src_ltg = "137.19219814664044";
+        String src_lat = GPS1;
+        String src_ltg = GPS2;
 
         // 目的地の緯度経度
         String des_lat = "34.83269398667252";
@@ -256,7 +265,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // 起点の緯度,経度, 目的地の緯度,経度
         String str = String.format(Locale.US,
                 "http://maps.google.com/maps?saddr=%s,%s&daddr=%s,%s",
-                src_lat, src_ltg, des_lat, des_ltg);
+                GPS1, GPS2, des_lat, des_ltg);
 
         intent.setData(Uri.parse(str));
         startActivity(intent);
@@ -266,8 +275,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void test8() {
 
         // 起点の緯度経度
-        String src_lat = "34.831776300364226";
-        String src_ltg = "137.19219814664044";
+        String src_lat = GPS1;
+        String src_ltg = GPS2;
 
         // 目的地の緯度経度
         String des_lat = "34.83212383128849";
@@ -282,7 +291,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // 起点の緯度,経度, 目的地の緯度,経度
         String str = String.format(Locale.US,
                 "http://maps.google.com/maps?saddr=%s,%s&daddr=%s,%s",
-                src_lat, src_ltg, des_lat, des_ltg);
+                GPS1, GPS2, des_lat, des_ltg);
 
         intent.setData(Uri.parse(str));
         startActivity(intent);
@@ -292,8 +301,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void test10() {
 
         // 起点の緯度経度
-        String src_lat = "34.831776300364226";
-        String src_ltg = "137.19219814664044";
+        String src_lat = GPS1;
+        String src_ltg = GPS2;
 
         // 目的地の緯度経度
         String des_lat = "34.83290793455413";
@@ -308,7 +317,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // 起点の緯度,経度, 目的地の緯度,経度
         String str = String.format(Locale.US,
                 "http://maps.google.com/maps?saddr=%s,%s&daddr=%s,%s",
-                src_lat, src_ltg, des_lat, des_ltg);
+                GPS1, GPS2, des_lat, des_ltg);
 
         intent.setData(Uri.parse(str));
         startActivity(intent);

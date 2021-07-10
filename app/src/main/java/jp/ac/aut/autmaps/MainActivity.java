@@ -143,7 +143,11 @@ public class MainActivity extends AppCompatActivity {
         editfr2.setText(fr2);
         editfr3.setText(fr3);
         editfr4.setText(fr4);
+
+
+
     }
+
 
     public void onSaveTapped(View view) {
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
@@ -177,6 +181,8 @@ public class MainActivity extends AppCompatActivity {
 
         editor.commit();
     }
+
+
 
 
     public void route(View view) {
